@@ -1,11 +1,7 @@
 {
-  "name": "JAIRRESTAURA-NEURO",
-  "short_name": "NEURO",
-  "description": "Comprender es acompañar.",
-  "lang": "es-CO",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#f7f3fb",
-  "theme_color": "#38234f",
-  "icons": []
+ "name":"JAIRRESTAURA-NEURO · Comprender es acompañar",
+ "short_name":"NEURO",
+ "description":"Biblioteca educativa autónoma para la neurodiversidad.",
+ "lang":"es-CO","start_url":"/","scope":"/","display":"standalone",
+ "background_color":"#f7f4fb","theme_color":"#38234f"
 }
