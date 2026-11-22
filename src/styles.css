@@ -228,3 +228,40 @@ header{height:66px;padding:0 42px;background:var(--surface);border-color:var(--l
  .article-tabs{position:static}
  .side-tip{position:static}
 }
+
+/* EXPERIENCIA VISUAL DE ALTO NIVEL · NEURO */
+.hero{isolation:isolate;background:radial-gradient(ellipse at 82% 30%,#fff9 0 7%,transparent 35%),linear-gradient(118deg,#e7def2 0%,#f7eee8 48%,#dcefe6 100%);border:1px solid #ffffffb8;box-shadow:0 24px 65px #31283e16}
+.heroart{position:relative;min-height:330px;border-radius:24px;overflow:hidden}
+.heroart:before{content:"";position:absolute;inset:8% 7%;border-radius:48% 52% 45% 55%;background:radial-gradient(circle,#fff9 0%,#ffffff42 48%,transparent 72%);filter:blur(5px)}
+.heroart img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 22px 30px #4736532b);transform:scale(1.1)}
+.areas-section{margin:46px 0 24px}
+.areas-heading{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:19px}
+.areas-heading h2{font-size:clamp(27px,3vw,36px);letter-spacing:-.055em;margin:8px 0;color:var(--text)}
+.areas-heading p{font-size:13px;line-height:1.7;color:var(--muted);max-width:590px;margin:0}
+.areas-count{white-space:nowrap;border:1px solid var(--line);background:var(--surface);padding:10px 15px;border-radius:30px;font-size:10px;color:var(--purple);font-weight:800}
+.areas-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.area-card{display:grid;grid-template-columns:minmax(170px,.9fr) minmax(0,1.1fr);align-items:stretch;min-height:200px;overflow:hidden;text-align:left;border:1px solid var(--line);border-radius:20px;background:var(--surface);padding:0;box-shadow:0 8px 24px #2e263a0a;transition:transform .25s,box-shadow .25s,border-color .25s}
+.area-card:hover{transform:translateY(-5px);border-color:#c9b9d8;box-shadow:0 18px 38px #2e263a16}
+.area-art{display:block;position:relative;min-height:200px;overflow:hidden;background:linear-gradient(145deg,#e7e0f0,#e0eee8)}
+.area-art:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 65%,#fff3);pointer-events:none}
+.area-art img{display:block;width:100%;height:100%;min-height:200px;object-fit:cover;transition:transform .5s}
+.area-card:hover .area-art img{transform:scale(1.055)}
+.area-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:9px;padding:22px 21px}
+.area-copy small{font-size:9px;letter-spacing:.18em;color:var(--purple);font-weight:850}
+.area-copy b{font-size:21px;letter-spacing:-.04em;color:var(--text)}
+.area-copy>span{font-size:11px;line-height:1.65;color:var(--muted)}
+.area-copy strong{display:flex;align-items:center;gap:9px;margin-top:5px;color:var(--purple);font-size:10px}
+.area-copy i{font-style:normal;width:25px;height:25px;display:grid;place-items:center;border-radius:50%;background:var(--pale);font-size:15px}
+.resource-card{overflow:hidden;border-radius:18px;padding:16px;box-shadow:0 7px 22px #2e263a0a}
+.resource-visual{height:145px;border-radius:13px;margin:-16px -16px 15px}
+.resource-visual img{transition:transform .5s}
+.resource-card:hover .resource-visual img{transform:scale(1.06)}
+.resource-visual>span{width:43px;height:43px;right:12px;bottom:12px;border:1px solid #fff;background:#fffefaee;border-radius:14px}
+.resource-visual>span .picture-icon{width:34px;height:34px}
+.stats div{border-radius:17px;transition:transform .2s,box-shadow .2s}
+.stats div:hover{transform:translateY(-3px);box-shadow:0 12px 28px #29233a12}
+.article{box-shadow:0 10px 30px #29233a08}
+.guide-cover{min-height:265px;border-radius:24px;box-shadow:0 18px 42px #29233a12}
+.guide-cover>img{height:265px}
+@media(max-width:1050px){.areas-grid{grid-template-columns:1fr}.area-card{min-height:185px}.area-art,.area-art img{min-height:185px}}
+@media(max-width:700px){.hero{min-height:0;gap:0}.heroart{min-height:190px;height:190px}.heroart img{transform:scale(1.04)}.areas-heading{align-items:flex-start;flex-direction:column}.areas-count{white-space:normal}.areas-grid{grid-template-columns:1fr;gap:12px}.area-card{grid-template-columns:40% 60%;min-height:150px}.area-art,.area-art img{min-height:150px}.area-copy{padding:14px 13px;gap:6px}.area-copy b{font-size:17px}.area-copy>span{font-size:10px}.resource-visual{height:108px}}
