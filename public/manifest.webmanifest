@@ -3,5 +3,5 @@
  "short_name":"NEURO",
  "description":"Biblioteca educativa autónoma para la neurodiversidad.",
  "lang":"es-CO","start_url":"/","scope":"/","display":"standalone",
- "background_color":"#f7f4fb","theme_color":"#38234f"
+ "background_color":"#f5f3ef","theme_color":"#29263b",\n "icons":[{"src":"/brand-neuro.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
 }
