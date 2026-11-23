@@ -315,3 +315,20 @@ button:disabled{filter:saturate(.5)}
  .area-copy>span{font-size:9px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.comm-card,.stats div{transition:none}.comm-card:hover,.stats div:hover{transform:none}}
+
+
+/* Continuidad pedagógica: retomar, ubicarse y avanzar sin perder el hilo */
+.learning-resume,.path-navigation{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:25px 28px;margin:24px 0 30px;border:1px solid var(--line);border-radius:19px;background:var(--surface);box-shadow:0 8px 24px #302a3b08}
+.learning-resume>div{flex:1;min-width:0}
+.learning-resume h2{font-size:23px;letter-spacing:-.035em;margin:8px 0}
+.learning-resume p,.path-navigation .muted{font-size:12px;line-height:1.7;color:var(--muted);max-width:700px}
+.learning-resume small{display:block;margin-top:8px;color:var(--muted);font-size:10px}
+.learning-progress{height:9px;width:100%;max-width:520px;background:var(--line);border-radius:20px;overflow:hidden;margin-top:14px}
+.learning-progress span{display:block;height:100%;border-radius:20px;background:linear-gradient(90deg,#6c568d,#79a891);transition:width .25s ease}
+.path-navigation{display:block;margin-top:28px}
+.path-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.path-meta b{font-size:11px;color:var(--muted)}
+.path-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:18px}
+.path-actions .primary,.learning-resume .primary{margin-top:0}
+.path-navigation .learning-progress{max-width:none}
+@media(max-width:700px){.learning-resume{align-items:stretch;flex-direction:column;padding:20px}.learning-resume .primary{width:100%}.path-navigation{padding:18px}.path-actions{align-items:stretch;flex-direction:column}.path-actions button{width:100%}}
