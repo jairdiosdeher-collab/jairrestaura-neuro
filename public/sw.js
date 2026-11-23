@@ -1,7 +1,7 @@
-const CACHE_NAME="jairrestaura-neuro-offline-v4";
+const CACHE_NAME="jairrestaura-neuro-offline-v5";
 const CORE=[
  "/","/index.html","/manifest.webmanifest","/src/main.jsx","/src/styles.css",
- "/images/hero-neuro.svg",
+ "/images/hero-neuro.svg",\n "/brand-neuro.svg","/favicon.svg",
  "/images/lessons/inicio.svg",
  "/images/lessons/neurodiversidad.svg",
  "/images/lessons/comunicacion.svg",
