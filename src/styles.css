@@ -340,3 +340,19 @@ button:disabled{filter:saturate(.5)}
 .guide-cover>img{display:block;width:100%;max-height:290px;object-fit:cover;border-radius:18px}
 @media(max-width:560px){.resource-card .lesson-thumb{height:92px}.guide-cover>img{max-height:210px}}
 @media(prefers-reduced-motion:reduce){.resource-card .lesson-thumb img{transition:none}}
+
+/* Lecturas ampliadas: fuentes externas curadas por tema */
+.further-reading{margin-top:22px;padding:22px;border:1px solid var(--line);border-radius:17px;background:var(--surface)}
+.further-reading-heading h2{font-size:20px;margin:7px 0}
+.further-reading-heading p{font-size:12px;line-height:1.7;color:var(--muted);margin:0 0 14px}
+.reference-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.reference-link{display:grid;grid-template-columns:34px minmax(0,1fr);gap:11px;align-items:start;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--text);text-decoration:none;transition:border-color .2s,transform .2s}
+.reference-link:hover{border-color:var(--purple);transform:translateY(-2px)}
+.reference-link:focus-visible{outline:3px solid var(--purple);outline-offset:3px}
+.reference-number{width:30px;height:30px;display:grid;place-items:center;border-radius:10px;background:var(--pale);color:var(--purple);font-size:11px;font-weight:800}
+.reference-copy{display:flex;flex-direction:column;gap:6px;min-width:0}
+.reference-copy b{font-size:12px;line-height:1.45}
+.reference-copy small{font-size:11px;line-height:1.6;color:var(--muted)}
+.reference-copy em{font-size:10px;font-style:normal;color:var(--purple);font-weight:800}
+.reference-note{margin:13px 0 0;color:var(--muted);font-size:10px;line-height:1.65}
+@media(max-width:700px){.further-reading{padding:15px}.reference-list{grid-template-columns:1fr}.reference-link{padding:12px}}
