@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+<title id="title">Primero · después · final</title><desc id="desc">Ilustración educativa de primero · después · final, con tres ideas: Primero, Después y Final.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0d9"/><stop offset="1" stop-color="#ffffff"/></linearGradient><filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#34445c" flood-opacity=".12"/></filter></defs>
+<rect width="960" height="520" rx="34" fill="url(#bg)"/>
+<circle cx="770" cy="92" r="110" fill="#fff" opacity=".42"/><circle cx="150" cy="420" r="125" fill="#fff" opacity=".34"/>
+<path d="M70 400 C210 310 290 470 420 390 S650 300 880 390" fill="none" stroke="#b57d35" stroke-width="5" opacity=".18" stroke-linecap="round"/>
+<g filter="url(#shadow)"><rect x="270" y="58" width="420" height="260" rx="36" fill="#fff" opacity=".94"/></g>
+<circle cx="480" cy="175" r="94" fill="#fff0d9"/><circle cx="480" cy="175" r="75" fill="#fff" opacity=".78"/>
+<text x="480" y="210" text-anchor="middle" font-size="108" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif">🗓️</text>
+<g fill="#b57d35" opacity=".9"><circle cx="310" cy="108" r="9"/><circle cx="650" cy="270" r="12"/><circle cx="710" cy="132" r="7"/><circle cx="238" cy="260" r="8"/></g>
+<text x="480" y="365" text-anchor="middle" fill="#26364b" font-size="34" font-weight="700" font-family="Arial,sans-serif">Primero · después · final</text>
+<g filter="url(#shadow)">
+<rect x="75" y="420" width="235" height="62" rx="20" fill="#fff"/><rect x="362" y="420" width="235" height="62" rx="20" fill="#fff"/><rect x="649" y="420" width="235" height="62" rx="20" fill="#fff"/>
+</g>
+<g fill="#b57d35" font-family="Arial,sans-serif" font-size="21" font-weight="700" text-anchor="middle"><text x="192" y="459">Primero</text><text x="479" y="459">Después</text><text x="766" y="459">Final</text></g>
+<text x="480" y="505" text-anchor="middle" fill="#607086" font-size="13" letter-spacing="3" font-family="Arial,sans-serif">JAIRRESTAURA NEURO · COMPRENDER ES ACOMPAÑAR</text></svg>
