@@ -332,3 +332,11 @@ button:disabled{filter:saturate(.5)}
 .path-actions .primary,.learning-resume .primary{margin-top:0}
 .path-navigation .learning-progress{max-width:none}
 @media(max-width:700px){.learning-resume{align-items:stretch;flex-direction:column;padding:20px}.learning-resume .primary{width:100%}.path-navigation{padding:18px}.path-actions{align-items:stretch;flex-direction:column}.path-actions button{width:100%}}
+
+/* Miniaturas ilustradas específicas de cada lección */
+.resource-card .lesson-thumb{display:block;width:100%;height:112px;margin:0 0 13px;border-radius:13px;overflow:hidden;background:var(--pale)}
+.resource-card .lesson-thumb img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s ease}
+.resource-card:hover .lesson-thumb img{transform:scale(1.035)}
+.guide-cover>img{display:block;width:100%;max-height:290px;object-fit:cover;border-radius:18px}
+@media(max-width:560px){.resource-card .lesson-thumb{height:92px}.guide-cover>img{max-height:210px}}
+@media(prefers-reduced-motion:reduce){.resource-card .lesson-thumb img{transition:none}}
