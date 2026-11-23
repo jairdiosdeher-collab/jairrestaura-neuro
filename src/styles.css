@@ -534,3 +534,67 @@ button:disabled{filter:saturate(.5)}
 .child-nav{background:#f1eaf8!important;color:#5e4778!important;font-weight:800!important}
 @media(max-width:800px){.child-hero{grid-template-columns:1fr;padding:25px}.child-hero-art{min-height:160px}.child-story{grid-template-columns:1fr}.child-story-art{min-height:130px}.child-mission-grid{grid-template-columns:1fr}.child-words{grid-template-columns:1fr}.child-words-art{font-size:52px}.child-words-list{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.child-hero{padding:21px 17px}.child-hero-copy p{font-size:13px}.child-hero-art{min-height:130px}.child-friends{font-size:25px}.child-welcome{padding:15px;font-size:13px}.child-story{padding:15px}.child-words{padding:15px}.child-words-list{grid-template-columns:1fr}.child-mission{padding:16px}.child-mission>p{min-height:0}}
+
+
+/* MÓDULO ADOLESCENTE · MI MUNDO, MI RITMO */
+.teen-module{max-width:1320px}
+.teen-hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;padding:38px 42px;border-radius:28px;background:linear-gradient(120deg,#e6eafa,#e8f4ef 55%,#fff0df);color:#292b43;overflow:hidden}
+.teen-kicker{font-size:10px;letter-spacing:.16em;font-weight:900;color:#6577a2}
+.teen-copy h1{font-size:clamp(38px,5vw,64px);line-height:.98;letter-spacing:-.06em;margin:15px 0;color:#30334c}
+.teen-copy h1 em{font-style:normal;color:#6b659e}
+.teen-copy p{font-size:15px;line-height:1.8;max-width:570px;color:#5c6075}
+.teen-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.teen-tags span{background:#ffffffc9;border:1px solid #fff;border-radius:30px;padding:9px 13px;font-size:11px;font-weight:750;color:#555875}
+.teen-art{min-height:235px;position:relative;display:grid;place-items:center;background:radial-gradient(circle,#ffffffb8 0 38%,transparent 39%);border-radius:50%}
+.teen-person{font-size:clamp(100px,13vw,160px);filter:drop-shadow(0 12px 14px #40436b20)}
+.teen-orbit{position:absolute;top:18px;left:10%;font-size:25px;color:#817bb0}
+.teen-spark{position:absolute;bottom:18px;right:14%;font-size:45px}
+.teen-welcome{margin:20px 0 34px;padding:19px 22px;border-radius:17px;background:#eaf2ee;border:1px solid #d6e6dc;color:#3d5c4b;font-size:14px;line-height:1.8}
+.teen-block{margin:36px 0}
+.teen-heading{margin-bottom:16px}
+.teen-heading>span{font-size:10px;font-weight:900;letter-spacing:.16em;color:#7370a0}
+.teen-heading h2{font-size:clamp(23px,3vw,32px);letter-spacing:-.04em;margin:8px 0;color:var(--text)}
+.teen-heading p{font-size:13px;line-height:1.7;color:var(--muted);max-width:780px}
+.teen-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.teen-topic{border:1px solid var(--line);border-radius:16px;background:var(--surface);overflow:hidden}
+.teen-topic.expanded{border-color:#aaa3ce;box-shadow:0 7px 22px #4c477b0d}
+.teen-topic-head{width:100%;display:flex;align-items:center;gap:12px;padding:16px;border:0;background:transparent;text-align:left;color:var(--text)}
+.teen-topic-head>span{font-size:27px}
+.teen-topic-head b{font-size:13px;flex:1}
+.teen-topic-head i{font-style:normal;font-size:20px;color:#8276a7}
+.teen-topic-body{padding:0 17px 17px 55px}
+.teen-topic-body p,.teen-topic-body li{font-size:12px;line-height:1.8;color:var(--muted)}
+.teen-topic-body ul{padding-left:18px}
+.teen-mood-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}
+.teen-mood-row button{display:grid;justify-items:center;gap:8px;padding:15px 8px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--text)}
+.teen-mood-row button>span{font-size:28px}
+.teen-mood-row button b{font-size:10px;text-align:center}
+.teen-mood-row button.selected{border:2px solid #7e78a8;background:var(--pale)}
+.teen-kindness{margin-top:13px;padding:15px 17px;border-radius:13px;background:#edf4ef;color:#3c6149;font-size:12px;line-height:1.8}
+.teen-kindness p{margin-bottom:0}
+.teen-tool-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.teen-tool-tabs button{padding:10px 13px;border:1px solid var(--line);border-radius:30px;background:var(--surface);font-size:11px;color:var(--text)}
+.teen-tool-tabs button.active{background:#e9e9f5;border-color:#b8b5d4;color:#4c4d78;font-weight:800}
+.teen-tool-card{padding:20px 22px;border-radius:18px;background:var(--surface);border:1px solid var(--line)}
+.teen-tool-card h3{font-size:16px}
+.teen-tool-card li{font-size:13px;line-height:1.9;color:var(--muted);padding:3px 0}
+.teen-tool-card small{display:block;margin-top:12px;color:var(--muted);font-size:10px;line-height:1.7}
+.teen-support-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.teen-support-grid>div{padding:17px;border-radius:15px;background:var(--surface);border:1px solid var(--line)}
+.teen-support-grid span{font-size:28px;display:block;margin-bottom:9px}
+.teen-support-grid b{font-size:13px}
+.teen-support-grid p{font-size:11px;line-height:1.7;color:var(--muted)}
+.teen-help-label{display:block;margin-top:16px;font-size:12px;font-weight:750;color:var(--text)}
+.teen-help-label textarea{display:block;width:100%;min-height:90px;margin-top:8px;padding:13px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--text);font-size:13px;line-height:1.7}
+.teen-privacy{font-size:10px;color:var(--muted)}
+.teen-safety{display:flex;gap:16px;margin:28px 0;padding:20px;border-radius:18px;background:#fff2e8;border:1px solid #f0d4c2;color:#704b3c}
+.teen-safety>span{font-size:38px}
+.teen-safety h2{font-size:18px;margin:0 0 8px;color:#714832}
+.teen-safety p{font-size:12px;line-height:1.8}
+.teen-adult-note{margin:25px 0;padding:18px 20px;border-left:5px solid #9b9ac5;border-radius:12px;background:var(--pale)}
+.teen-adult-note b{font-size:13px}
+.teen-adult-note p{font-size:12px;line-height:1.8;color:var(--muted);margin-bottom:0}
+.teen-closing{text-align:center;padding:24px 14px;font-size:clamp(16px,2.4vw,22px);line-height:1.6;font-weight:850;color:#6c6898}
+.teen-nav{background:#e9edf9!important;color:#4d557d!important;font-weight:800!important}
+@media(max-width:800px){.teen-hero{grid-template-columns:1fr;padding:26px}.teen-art{min-height:160px}.teen-topic-grid{grid-template-columns:1fr}.teen-support-grid{grid-template-columns:1fr 1fr}.teen-mood-row{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:480px){.teen-hero{padding:21px 17px}.teen-copy p{font-size:13px}.teen-art{min-height:130px}.teen-person{font-size:110px}.teen-welcome{padding:15px;font-size:13px}.teen-topic-head{padding:14px}.teen-topic-body{padding-left:52px}.teen-mood-row{grid-template-columns:repeat(2,minmax(0,1fr))}.teen-support-grid{grid-template-columns:1fr}.teen-safety{padding:15px;gap:10px}.teen-safety>span{font-size:29px}.teen-safety h2{font-size:16px}}
