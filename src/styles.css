@@ -356,3 +356,7 @@ button:disabled{filter:saturate(.5)}
 .reference-copy em{font-size:10px;font-style:normal;color:var(--purple);font-weight:800}
 .reference-note{margin:13px 0 0;color:var(--muted);font-size:10px;line-height:1.65}
 @media(max-width:700px){.further-reading{padding:15px}.reference-list{grid-template-columns:1fr}.reference-link{padding:12px}}
+
+
+/* IDENTIDAD VISUAL · MARCA JAIRRESTAURA NEURO */
+.brand{gap:13px;align-items:center}.brand-logo{display:block;width:52px;height:52px;flex:0 0 52px;object-fit:contain;border-radius:15px;background:transparent;box-shadow:0 8px 22px #100e1c35}.brand b{font-size:13px;letter-spacing:.13em}.brand small{font-size:9px;line-height:1.45;letter-spacing:.07em}.sidebar{background:linear-gradient(165deg,#28263b 0%,#302b43 58%,#253a38 100%)}.sidebar:before{content:"";position:absolute;pointer-events:none;inset:0 0 auto;height:190px;background:radial-gradient(ellipse at 12% 0%,#9c83b72b,transparent 70%)}.brand,.offline-pill,.sidebar .nav,.navlabel{position:relative}.hero{border-radius:28px}.primary,.secondary,.theme,.nav,.area-card,.resource-card{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}.primary:focus-visible,.secondary:focus-visible,.theme:focus-visible,.nav:focus-visible{outline:3px solid #d6bded;outline-offset:3px}.footer{line-height:1.7}.resource-card,.area-card{box-shadow:0 8px 26px #302a3b0b}@media(max-width:700px){.brand-logo{width:44px;height:44px;flex-basis:44px}.brand b{font-size:12px}.brand small{font-size:8px}.sidebar:before{height:130px}}
