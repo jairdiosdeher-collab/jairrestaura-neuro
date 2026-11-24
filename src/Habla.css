@@ -80,3 +80,38 @@
 .habla-closing{text-align:center;padding:24px 12px;font-size:clamp(16px,2.4vw,22px);font-weight:850;color:#75678e}
 @media(max-width:950px){.habla-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.habla-hero{grid-template-columns:1fr}.habla-hero-art{min-height:180px}}
 @media(max-width:650px){.habla-hero{padding:23px 18px}.habla-hero h1{font-size:36px}.habla-hero-copy>p{font-size:13px}.habla-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.habla-tabs button{font-size:11px}.habla-card-grid,.habla-family-grid{grid-template-columns:1fr}.habla-feature-card{min-height:190px}.habla-word-card,.habla-picture-card,.habla-story-card{grid-template-columns:1fr;padding:17px}.habla-word-illustration,.habla-picture-emoji,.habla-story-art{min-height:120px;font-size:75px}.habla-adult-bar{align-items:flex-start;flex-wrap:wrap}.habla-adult-bar>div{min-width:calc(100% - 60px)}.habla-adult-bar button{margin-left:45px}}
+
+/* Segunda generación: recorrido, sílabas y comunicación aumentativa */
+.habla-path-list{display:grid;gap:13px;max-width:1000px}
+.habla-path-card{display:grid;grid-template-columns:74px minmax(0,1fr) auto;gap:16px;align-items:start;padding:19px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
+.habla-path-icon{width:66px;height:66px;display:grid;place-items:center;border-radius:18px;background:linear-gradient(135deg,#fff0e5,#eeeafa);font-size:34px}
+.habla-path-copy small,.habla-syllable-card small,.habla-phrase-box small{font-size:9px;letter-spacing:.14em;font-weight:900;color:#88799e}
+.habla-path-copy h3{font-size:18px;margin:5px 0;color:var(--text)}
+.habla-path-copy>p{font-size:12px;line-height:1.7;color:var(--muted)}
+.habla-path-copy>button,.habla-path-steps>button{border:1px solid #dcd4e9;border-radius:10px;background:#f4f0fa;color:#584d70;padding:9px 12px;font-size:11px;font-weight:800;cursor:pointer}
+.habla-path-status{font-size:10px;font-weight:800;color:#62806a;white-space:nowrap}
+.habla-path-steps{display:grid;gap:9px;margin-top:14px;padding:14px;border-radius:13px;background:var(--pale)}
+.habla-path-steps>div{display:flex;gap:10px;align-items:center;color:var(--text);font-size:12px;line-height:1.6}
+.habla-path-steps>div>span{width:24px;height:24px;display:grid;place-items:center;border-radius:50%;background:#fff;color:#6c6089;font-weight:900}
+.habla-syllable-card{display:grid;grid-template-columns:190px 1fr;gap:22px;align-items:center;max-width:900px;padding:24px;border-radius:22px;background:linear-gradient(120deg,#fff2df,#f1edfb);border:1px solid #eee4f0}
+.habla-syllable-emoji{min-height:165px;display:grid;place-items:center;border-radius:18px;background:#ffffffb5;font-size:92px}
+.habla-syllable-card h3{font-size:32px;margin:7px 0 13px;color:#393448}
+.habla-syllable-card p{font-size:12px;color:#6c6478;line-height:1.7}
+.habla-syllable-parts{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.habla-syllable-parts button{min-width:48px;padding:12px;border:1px solid #d9cfe8;border-radius:12px;background:#fff;color:#514568;font-size:16px;font-weight:900;cursor:pointer}
+.habla-syllable-card>div:last-child>button{margin:6px 7px 0 0;padding:10px 12px;border:0;border-radius:10px;background:#6d638f;color:#fff;font-size:11px;font-weight:800;cursor:pointer}
+.habla-board-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}
+.habla-board-tabs button{padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--text);font-size:12px;font-weight:800;cursor:pointer}
+.habla-board-tabs button.selected{background:#eeeafa;border-color:#d8d0eb;color:#574c78}
+.habla-picto-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:850px}
+.habla-picto-grid button{min-height:130px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:9px;border:1px solid #e6dfed;border-radius:17px;background:linear-gradient(145deg,#fff,#f6f2fb);color:#494258;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.habla-picto-grid button:hover{transform:translateY(-2px);box-shadow:0 8px 20px #40364b12}
+.habla-picto-grid button span{font-size:37px}
+.habla-picto-grid button b{font-size:13px}
+.habla-phrase-box{max-width:850px;margin-top:16px;padding:18px;border:1px solid #dce9df;border-radius:16px;background:#edf5ef;color:#405c49}
+.habla-phrase-box>p{min-height:30px;font-size:16px;font-weight:800;line-height:1.6}
+.habla-phrase-box>div{display:flex;gap:8px;flex-wrap:wrap}
+.habla-phrase-box button{padding:10px 13px;border:0;border-radius:10px;background:#587b62;color:white;font-size:11px;font-weight:800;cursor:pointer}
+.habla-phrase-box button+button{background:#fff;color:#49634f;border:1px solid #d4e4d7}
+.habla-phrase-box button:disabled{opacity:.45;cursor:not-allowed}
+@media(max-width:650px){.habla-path-card{grid-template-columns:54px minmax(0,1fr);gap:12px;padding:14px}.habla-path-icon{width:52px;height:52px;font-size:27px}.habla-path-status{grid-column:2}.habla-syllable-card{grid-template-columns:1fr;padding:16px}.habla-syllable-emoji{min-height:105px;font-size:68px}.habla-picto-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.habla-picto-grid button{min-height:112px}}
