@@ -1,0 +1,82 @@
+.habla-module{max-width:1320px}
+.habla-hero{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:center;padding:clamp(24px,4vw,46px);border-radius:28px;background:linear-gradient(120deg,#fff0e5,#f0eaff 52%,#e7f5ee);color:#343348;overflow:hidden}
+.habla-kicker,.habla-section-heading>span{font-size:10px;letter-spacing:.16em;font-weight:900;color:#8a729b}
+.habla-hero h1{font-size:clamp(35px,5vw,61px);line-height:1.02;letter-spacing:-.055em;margin:14px 0;color:#38354b;max-width:700px}
+.habla-hero h1 span{white-space:nowrap}
+.habla-hero-copy>p{font-size:15px;line-height:1.8;color:#656075;max-width:610px}
+.habla-tags{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+.habla-tags span{padding:8px 12px;border-radius:30px;background:#ffffffc9;color:#5e5870;font-size:11px;font-weight:750}
+.habla-primary,.habla-actions button,.habla-picture-copy button,.habla-story-copy button,.habla-family-form button,.habla-complete{border:0;border-radius:12px;padding:12px 16px;background:#6d638f;color:white;font-weight:800;font-size:12px;cursor:pointer}
+.habla-primary span{margin-left:18px}
+.habla-hero-art{min-height:245px;position:relative;display:grid;place-items:center;border-radius:45%;background:radial-gradient(circle,#ffffffc9 0 43%,transparent 44%)}
+.habla-friends{font-size:clamp(75px,10vw,125px);filter:drop-shadow(0 10px 12px #51476b20);z-index:1}
+.habla-sun{position:absolute;top:8%;right:13%;font-size:43px}
+.habla-cloud{position:absolute;top:18%;left:12%;font-size:45px}
+.habla-bubbles{position:absolute;bottom:8%;right:12%;font-size:30px}
+.habla-welcome{margin:18px 0 25px;padding:17px 20px;border-radius:15px;background:#edf5ef;border:1px solid #dcebe0;color:#45634e;font-size:13px;line-height:1.8}
+.habla-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0;padding:8px;border-radius:16px;background:var(--surface);border:1px solid var(--line)}
+.habla-tabs button,.habla-sound-tabs button{border:1px solid transparent;border-radius:12px;padding:11px 14px;background:transparent;color:var(--text);font-size:12px;font-weight:750;cursor:pointer}
+.habla-tabs button.active,.habla-sound-tabs button.selected{background:#eeeafa;border-color:#d8d0eb;color:#574c78}
+.habla-section{margin:24px 0 36px}
+.habla-section-heading{margin:20px 0}
+.habla-section-heading h2{font-size:clamp(24px,3vw,34px);letter-spacing:-.04em;margin:8px 0;color:var(--text)}
+.habla-section-heading p{font-size:13px;line-height:1.8;color:var(--muted);max-width:800px}
+.habla-card-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.habla-feature-card{min-height:240px;display:flex;flex-direction:column;align-items:flex-start;text-align:left;padding:20px;border:1px solid #e8e2ee;border-radius:19px;color:#423c52;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.habla-feature-card:hover{transform:translateY(-3px);box-shadow:0 12px 26px #38304b12}
+.habla-feature-card>span{font-size:43px;margin-bottom:14px}
+.habla-feature-card small{font-size:9px;letter-spacing:.14em;font-weight:900;opacity:.7}
+.habla-feature-card b{font-size:17px;margin:8px 0}
+.habla-feature-card p{font-size:11px;line-height:1.7;flex:1;margin:0 0 14px}
+.habla-feature-card strong{font-size:11px}
+.habla-feature-card.peach,.habla-word-card.peach{background:#fff0e7}
+.habla-feature-card.mint,.habla-word-card.mint{background:#eaf5ed}
+.habla-feature-card.lilac,.habla-word-card.lilac{background:#f0eafa}
+.habla-feature-card.sky,.habla-word-card.sky{background:#e9f2fb}
+.habla-feature-card.lemon,.habla-word-card.lemon{background:#fff6d9}
+.habla-note{margin:20px 0;padding:15px 18px;border-radius:13px;background:var(--pale);color:var(--muted);font-size:12px;line-height:1.8}
+.habla-sound-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.habla-sound-tabs button{background:var(--surface);border-color:var(--line)}
+.habla-word-card{display:grid;grid-template-columns:220px 1fr;gap:22px;align-items:center;padding:26px;border-radius:22px;max-width:900px}
+.habla-word-card.sky{background:#e9f2fb}.habla-word-card.lemon{background:#fff6d9}
+.habla-word-illustration{display:grid;place-items:center;min-height:180px;font-size:105px;background:#ffffffa8;border-radius:20px}
+.habla-word-copy small,.habla-picture-copy>span,.habla-story-copy small{font-size:9px;letter-spacing:.15em;font-weight:900;color:#766b8b}
+.habla-word-copy h3,.habla-picture-copy h3,.habla-story-copy h3{font-size:clamp(27px,4vw,40px);margin:7px 0;color:#393448}
+.habla-word-copy p,.habla-story-copy p{font-size:13px;line-height:1.8;color:#635d70}
+.habla-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}
+.habla-actions button:nth-child(2),.habla-picture-copy button:nth-of-type(2),.habla-story-copy button:nth-of-type(2){background:#ffffffc9;color:#544b68;border:1px solid #ded7e9}
+.habla-complete{margin-top:12px;background:#e9f2eb;color:#3d694a;border:1px solid #d5e8d9}
+.habla-picture-card,.habla-story-card{display:grid;grid-template-columns:220px 1fr;gap:22px;align-items:center;max-width:900px;padding:25px;border-radius:22px;background:linear-gradient(120deg,#fff2e8,#edf3fb);border:1px solid #eee6ed}
+.habla-picture-emoji,.habla-story-art{display:grid;place-items:center;min-height:180px;font-size:100px;border-radius:18px;background:#ffffffb8}
+.habla-picture-copy h3{font-size:22px;line-height:1.4}
+.habla-picture-copy button,.habla-story-copy button{margin:8px 8px 0 0}
+.habla-questions{max-width:900px;margin-top:18px;padding:20px;border-radius:17px;background:var(--surface);border:1px solid var(--line);display:grid;gap:9px}
+.habla-questions>b{font-size:13px;margin-bottom:5px}
+.habla-questions button{text-align:left;padding:11px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);font-size:12px;cursor:pointer}
+.habla-questions button.chosen{border-color:#a89ac7;background:#f2eef9}
+.habla-questions p{font-size:11px;line-height:1.7;color:var(--muted)}
+.habla-family-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.habla-family-grid article{padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.habla-family-grid article>span{display:block;font-size:30px;margin-bottom:9px}
+.habla-family-grid article>b{font-size:13px}
+.habla-family-grid article>p{font-size:11px;line-height:1.7;color:var(--muted)}
+.habla-family-form{max-width:850px;margin-top:18px;padding:19px;border-radius:16px;background:var(--surface);border:1px solid var(--line)}
+.habla-family-form label{display:block;font-size:12px;font-weight:800;margin-bottom:9px}
+.habla-family-form textarea{display:block;width:100%;min-height:90px;padding:12px;border:1px solid var(--line);border-radius:11px;background:var(--bg);color:var(--text);font:inherit;font-size:12px}
+.habla-family-form button{margin-top:10px}
+.habla-family-form>p{font-size:11px;color:#477553}
+.habla-progress-panel{display:flex;gap:18px;align-items:center;max-width:800px;padding:20px;border-radius:18px;background:#edf5ef;color:#405c49}
+.habla-progress-number{width:70px;height:70px;display:grid;place-items:center;border-radius:50%;background:#fff;font-size:30px;font-weight:900}
+.habla-progress-panel b{font-size:15px}.habla-progress-panel p{font-size:12px;line-height:1.7}
+.habla-progress-list{max-width:800px;margin:15px 0}
+.habla-progress-list>div{display:flex;gap:10px;align-items:center;padding:12px 5px;border-bottom:1px solid var(--line);font-size:12px;color:var(--text)}
+.habla-progress-list>div>b{margin-left:auto;color:var(--muted);font-size:10px}
+.habla-adult-bar{display:flex;gap:14px;align-items:center;margin:30px 0 14px;padding:17px;border-radius:16px;background:#f3eff9;border:1px solid #e6deef;color:#4e4661}
+.habla-adult-bar>span{font-size:33px}.habla-adult-bar>div{flex:1}
+.habla-adult-bar b{font-size:13px}.habla-adult-bar p{font-size:11px;line-height:1.6;margin:4px 0 0}
+.habla-adult-bar button{padding:10px 12px;border:1px solid #d7cde7;border-radius:10px;background:#fff;color:#584d70;font-size:11px;font-weight:800;cursor:pointer}
+.habla-parent-panel{padding:20px;border-radius:15px;background:var(--surface);border:1px solid var(--line);color:var(--text)}
+.habla-parent-panel h3{font-size:17px}.habla-parent-panel p{font-size:12px;line-height:1.8;color:var(--muted)}
+.habla-closing{text-align:center;padding:24px 12px;font-size:clamp(16px,2.4vw,22px);font-weight:850;color:#75678e}
+@media(max-width:950px){.habla-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.habla-hero{grid-template-columns:1fr}.habla-hero-art{min-height:180px}}
+@media(max-width:650px){.habla-hero{padding:23px 18px}.habla-hero h1{font-size:36px}.habla-hero-copy>p{font-size:13px}.habla-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.habla-tabs button{font-size:11px}.habla-card-grid,.habla-family-grid{grid-template-columns:1fr}.habla-feature-card{min-height:190px}.habla-word-card,.habla-picture-card,.habla-story-card{grid-template-columns:1fr;padding:17px}.habla-word-illustration,.habla-picture-emoji,.habla-story-art{min-height:120px;font-size:75px}.habla-adult-bar{align-items:flex-start;flex-wrap:wrap}.habla-adult-bar>div{min-width:calc(100% - 60px)}.habla-adult-bar button{margin-left:45px}}
