@@ -9,6 +9,30 @@ const soundSets = [
   { id:"m", name:"Sonido M", color:"lemon", icon:"🐵", intro:"Explora el sonido M con palabras conocidas y divertidas.", words:[["mano","✋"],["mamá","💗"],["mapa","🗺️"],["mono","🐒"]] }
 ];
 
+const learningPath = [
+  {id:"escucho",title:"Descubro sonidos",emoji:"👂",level:"1",goal:"Prestar atención a sonidos del entorno y disfrutar de escuchar.",steps:["Escuchar sonidos de animales y objetos.","Distinguir sonidos largos y cortos.","Elegir el sonido que más me gusta."]},
+  {id:"silabas",title:"Juego con sílabas",emoji:"👏",level:"2",goal:"Explorar el ritmo de las palabras con palmas, movimientos o imágenes.",steps:["Escuchar una palabra conocida.","Acompañar sus partes con palmas si resulta cómodo.","Jugar a encontrar palabras que comienzan parecido."]},
+  {id:"palabras",title:"Descubro palabras",emoji:"🧩",level:"3",goal:"Relacionar imágenes, objetos, acciones y palabras.",steps:["Observar una imagen.","Escuchar una palabra.","Elegir otra imagen relacionada."]},
+  {id:"frases",title:"Uno ideas",emoji:"💬",level:"4",goal:"Explorar distintas maneras de expresar necesidades, ideas y preferencias.",steps:["Elegir una imagen.","Combinar dos o más pictogramas.","Compartir una idea con voz, gesto o señalamiento."]},
+  {id:"historias",title:"Cuento lo que imagino",emoji:"📖",level:"5",goal:"Disfrutar historias, secuencias y conversaciones compartidas.",steps:["Observar una secuencia.","Ordenar lo que sucede.","Inventar un final propio."]}
+];
+
+const syllableWords = [
+  {word:"mariposa",parts:["ma","ri","po","sa"],emoji:"🦋"},
+  {word:"pelota",parts:["pe","lo","ta"],emoji:"⚽"},
+  {word:"tomate",parts:["to","ma","te"],emoji:"🍅"},
+  {word:"camino",parts:["ca","mi","no"],emoji:"🛤️"},
+  {word:"familia",parts:["fa","mi","lia"],emoji:"👨‍👩‍👧"},
+  {word:"conejo",parts:["co","ne","jo"],emoji:"🐰"}
+];
+
+const communicationBoards = [
+  {name:"Necesito",items:[["💧","Agua"],["🍽️","Comer"],["🚻","Baño"],["🛏️","Descansar"],["🆘","Ayuda"],["✋","Parar"]]},
+  {name:"Quiero",items:[["🎲","Jugar"],["📖","Leer"],["🎵","Música"],["🌳","Salir"],["🧸","Juguete"],["📺","Ver"]]},
+  {name:"Siento",items:[["😊","Feliz"],["😟","Preocupado"],["😴","Tengo sueño"],["🤕","Me duele"],["❤️","Te quiero"],["🙅","No quiero"]]},
+  {name:"Converso",items:[["👋","Hola"],["🙏","Por favor"],["💛","Gracias"],["❓","¿Qué?"],["✅","Sí"],["❌","No"]]}
+];
+
 const pictureWords = [
   {word:"mariposa",emoji:"🦋",clue:"Tiene alas de muchos colores."},
   {word:"pelota",emoji:"⚽",clue:"Podemos jugar con ella."},
@@ -45,6 +69,10 @@ export default function Habla({ onBack }) {
   const [pictureIndex,setPictureIndex] = useState(0);
   const [storyIndex,setStoryIndex] = useState(0);
   const [storyQuestion,setStoryQuestion] = useState(0);
+  const [syllableIndex,setSyllableIndex] = useState(0);
+  const [boardCategory,setBoardCategory] = useState(0);
+  const [phrase,setPhrase] = useState([]);
+  const [expandedPath,setExpandedPath] = useState("escucho");
   const [progress,setProgress] = useState(readProgress);
   const [parentOpen,setParentOpen] = useState(false);
   const [note,setNote] = useState("");
@@ -93,18 +121,43 @@ export default function Habla({ onBack }) {
     <div className="habla-welcome"><b>Una idea para recordar:</b> comunicarse es mucho más que pronunciar sonidos. También es señalar, mirar imágenes, usar gestos, escribir, jugar y compartir. Todas las formas de comunicación merecen respeto.</div>
 
     <nav className="habla-tabs" aria-label="Secciones de Habla">
-      {[["inicio","🏡 Inicio"],["sonidos","🔤 Sonidos"],["palabras","🧩 Palabras"],["cuentos","📖 Cuentos"],["familia","💛 Familias"],["progreso","🌟 Mi recorrido"]].map(([id,label])=><button key={id} className={section===id?"active":""} onClick={()=>setSection(id)}>{label}</button>)}
+      {[["inicio","🏡 Inicio"],["ruta","🧭 Mi camino"],["sonidos","🔤 Sonidos"],["silabas","👏 Sílabas"],["palabras","🧩 Palabras"],["pictos","💬 Me comunico"],["cuentos","📖 Cuentos"],["familia","💛 Familias"],["progreso","🌟 Mi recorrido"]].map(([id,label])=><button key={id} className={section===id?"active":""} onClick={()=>setSection(id)}>{label}</button>)}
     </nav>
 
     {section==="inicio" && <div className="habla-section">
       <div className="habla-section-heading"><span>UN RECORRIDO AMABLE</span><h2>¿Qué quieres descubrir hoy?</h2><p>Elige una actividad. No hay calificaciones ni respuestas que definan cuánto vale un niño.</p></div>
       <div className="habla-card-grid">
-        <button className="habla-feature-card peach" onClick={()=>setSection("sonidos")}><span>🦊</span><small>01 · EXPLORAR</small><b>Sonidos y palabras</b><p>Escucha palabras, descubre sonidos y juega con sus ritmos.</p><strong>Ir a explorar →</strong></button>
+        <button className="habla-feature-card peach" onClick={()=>setSection("ruta")}><span>🦊</span><small>01 · EXPLORAR</small><b>Sonidos y palabras</b><p>Escucha palabras, descubre sonidos y juega con sus ritmos.</p><strong>Ir a explorar →</strong></button>
         <button className="habla-feature-card mint" onClick={()=>setSection("palabras")}><span>🧩</span><small>02 · DESCUBRIR</small><b>¿Qué veo?</b><p>Observa imágenes, escucha pistas y encuentra palabras.</p><strong>Jugar ahora →</strong></button>
         <button className="habla-feature-card lilac" onClick={()=>setSection("cuentos")}><span>📚</span><small>03 · IMAGINAR</small><b>Cuentos para conversar</b><p>Historias cortas para escuchar, recordar y crear.</p><strong>Leer un cuento →</strong></button>
         <button className="habla-feature-card sky" onClick={()=>setSection("familia")}><span>👨‍👩‍👧</span><small>04 · ACOMPAÑAR</small><b>En casa, juntos</b><p>Ideas sencillas para conversar durante la vida diaria.</p><strong>Ver ideas →</strong></button>
       </div>
       <div className="habla-note"><b>Para adultos:</b> estas actividades son educativas y recreativas. No evalúan, diagnostican ni tratan trastornos del habla o del lenguaje. Si existe preocupación por el desarrollo comunicativo, consulta con un fonoaudiólogo o profesional de salud infantil.</div>
+    </div>}
+
+    {section==="ruta" && <div className="habla-section">
+      <div className="habla-section-heading"><span>MI CAMINO DE APRENDIZAJE</span><h2>Pequeños pasos, grandes descubrimientos</h2><p>Explora las propuestas en el orden que tenga sentido para cada niño. No hay niveles obligatorios, pruebas ni plazos.</p></div>
+      <div className="habla-path-list">{learningPath.map((item,index)=><article className="habla-path-card" key={item.id}>
+        <div className="habla-path-icon">{item.emoji}</div><div className="habla-path-copy"><small>ETAPA {item.level}</small><h3>{item.title}</h3><p>{item.goal}</p><button onClick={()=>setExpandedPath(expandedPath===item.id?"":item.id)}>{expandedPath===item.id?"Ocultar actividades":"Ver actividades →"}</button>
+        {expandedPath===item.id&&<div className="habla-path-steps">{item.steps.map((step,i)=><div key={step}><span>{i+1}</span>{step}</div>)}<button onClick={()=>{setSection(item.id==="silabas"?"silabas":item.id==="palabras"?"palabras":item.id==="frases"?"pictos":item.id==="historias"?"cuentos":"sonidos");markDone("ruta-"+item.id)}}>Comenzar esta propuesta</button></div>}</div>
+        <span className="habla-path-status">{progress["ruta-"+item.id]?"✓ Explorada":"A tu ritmo"}</span>
+      </article>)}</div>
+      <div className="habla-note">Las etapas son ideas para organizar experiencias educativas, no una escala del desarrollo ni una evaluación de capacidades. Puedes comenzar por cualquier actividad.</div>
+    </div>}
+
+    {section==="silabas" && <div className="habla-section">
+      <div className="habla-section-heading"><span>JUEGO DE RITMOS Y PALABRAS</span><h2>Las palabras tienen partes</h2><p>Escucha, observa las partes de una palabra y acompáñalas con palmas, movimientos o fichas si el niño lo disfruta. También puede solo mirar y escuchar.</p></div>
+      <article className="habla-syllable-card"><div className="habla-syllable-emoji">{syllableWords[syllableIndex].emoji}</div><div><small>PALABRA PARA EXPLORAR</small><h3>{syllableWords[syllableIndex].word}</h3><div className="habla-syllable-parts">{syllableWords[syllableIndex].parts.map((part,i)=><button key={i} onClick={()=>speak(part)}>{part}</button>)}</div><p>{syllableWords[syllableIndex].parts.length} partes para explorar, sin prisa.</p><button onClick={()=>speak(syllableWords[syllableIndex].word)}>🔊 Escuchar palabra completa</button><button onClick={()=>setSyllableIndex(v=>(v+1)%syllableWords.length)}>Otra palabra ↗</button></div></article>
+      <button className="habla-complete" onClick={()=>markDone("silabas")}>✓ Marcar este juego como realizado</button>
+      <div className="habla-note">La separación mostrada es una ayuda lúdica. No es una prueba de conciencia fonológica ni debe usarse para calificar al niño.</div>
+    </div>}
+
+    {section==="pictos" && <div className="habla-section">
+      <div className="habla-section-heading"><span>COMUNICACIÓN PARA TODOS</span><h2>Mi tablero para decir lo que necesito</h2><p>Elige imágenes para construir un mensaje. El niño puede señalar, tocar, mirar, usar gestos o combinar pictogramas. No necesita hablar para comunicarse.</p></div>
+      <div className="habla-board-tabs">{communicationBoards.map((board,index)=><button key={board.name} className={boardCategory===index?"selected":""} onClick={()=>setBoardCategory(index)}>{board.name}</button>)}</div>
+      <div className="habla-picto-grid">{communicationBoards[boardCategory].items.map(([emoji,label])=><button key={label} onClick={()=>setPhrase(old=>[...old,label].slice(-8))}><span>{emoji}</span><b>{label}</b></button>)}</div>
+      <div className="habla-phrase-box"><small>MI MENSAJE</small><p>{phrase.length?phrase.join(" · "):"Toca las imágenes para construir un mensaje."}</p><div><button onClick={()=>phrase.length&&speak(phrase.join(" "))} disabled={!phrase.length}>🔊 Escuchar mensaje</button><button onClick={()=>setPhrase([])} disabled={!phrase.length}>Limpiar</button></div></div>
+      <div className="habla-note">Este tablero es un apoyo básico de comunicación y no sustituye un sistema de comunicación aumentativa y alternativa individualizado. Las palabras, imágenes y organización deben adaptarse a las preferencias y necesidades de cada persona. Nunca retires otros medios de comunicación.</div>
     </div>}
 
     {section==="sonidos" && <div className="habla-section">
